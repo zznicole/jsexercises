@@ -148,7 +148,7 @@ document.write('<p>' + favDish.ingredients + '</p>')
 //       console.log(customer.value + customer.key)
 //   }
 // }
-*/
+
 // Array
 // 1. Suppose we have this array: people = ["Alex", "Mary", "Devon", "James"]; Do the following manipulations with the array: 
     // 1) Remove “James” from the array; 
