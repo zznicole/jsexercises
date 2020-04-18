@@ -82,13 +82,13 @@ console.log(countCharacters ('Happy Easter, tomas', 't'));
 */ 
 
 // Write a function that reverse a number. For example, 12345 = 54321.
- function reverseIt(reverseNumber) {
-     for (let i = reverseNumber; i > 0; i--) {
-        return reverseNumber[i];
-    }
- }
+//  function reverseIt(reverseNumber) {
+//      for (let i = reverseNumber; i > 0; i--) {
+//         return reverseNumber[i];
+//     }
+//  }
 
- console.log(reverseIt(10)); 
+//  console.log(reverseIt(10)); 
 
 
 // Objects
@@ -100,12 +100,12 @@ console.log(countCharacters ('Happy Easter, tomas', 't'));
 //   age: 12
 // };
 // Output will be: name, class, age
-let student = {
-    name: 'David Johns',
-    class: 'I',
-    age: 7
-};
-console.log(student);
+// let student = {
+//     name: 'David Johns',
+//     class: 'I',
+//     age: 7
+// };
+// console.log(student);
 
 // 2.  Create an object that holds information of your favorite recipe. 
 // It should have properties for title (a string), servings (a number), and ingredients 
@@ -115,14 +115,14 @@ console.log(student);
 // Servings: 2
 // Ingredients: cumin, cocoa, cinnamon
 
-let favDish = {
-    title: 'Spaghetti',
-    servings: 4,
-    ingredients: 'Olive Oil, Garlic, Basil, Salt, BlackPepper, Pasta'
-}
-document.write('<h1>' + favDish.title + '</h1>');
-document.write('<p>' + favDish.servings + '</p>');
-document.write('<p>' + favDish.ingredients + '</p>')
+// let favDish = {
+//     title: 'Spaghetti',
+//     servings: 4,
+//     ingredients: 'Olive Oil, Garlic, Basil, Salt, BlackPepper, Pasta'
+// }
+// document.write('<h1>' + favDish.title + '</h1>');
+// document.write('<p>' + favDish.servings + '</p>');
+// document.write('<p>' + favDish.ingredients + '</p>')
 
 
 
@@ -178,56 +178,186 @@ document.write('<p>' + favDish.ingredients + '</p>')
 // 2. Write a function that accepts an array and returns a reversed version of it. Do not use the reverse() function. 
 //    For example: ['a', 'b', 3, 'c', [], 10] will be [10, [], 'c', 3, 'b', 'a'] .
 
-function reverseArray(myArray) {
-  let result = [];
-//  for (let i = 0; i < myArray.length; i++) {
-  for (let i = myArray.length-1; i >= 0; i--) {
-        result.push(myArray[i]);
-  }
-  return result
-//  return result.reverse();
-}
+// function reverseArray(myArray) {
+//   let result = [];
+// //  for (let i = 0; i < myArray.length; i++) {
+//   for (let i = myArray.length-1; i >= 0; i--) {
+//         result.push(myArray[i]);
+//   }
+//   return result
+// //  return result.reverse();
+// }
     
 
-console.log(reverseArray(['a', 'b', 3, 'c', [], 10]));
-// // 3. Write a script that displays the reading status of the following books (either to the webpage or to the console).
-   let myLibrary = [ 
-  {
-    author: 'Bill Gates',
-    title: 'The Road Ahead',
-    isRead: true
-  },
-  {
-    author: 'Steve Jobs',
-    title: 'Walter Isaacson',
-    isRead: true
-  },
-  {
-    author: 'Suzanne Collins',
-    title:  'Mockingjay: The Final Book of The Hunger Games', 
-    isRead: false
-}];
-// // Example output:
-// // I already read ‘The Road Ahead’ by Bill Gates
-// // I already read ‘Walter Isaacson’ by Steve Jobs
-// // I still need to read ‘Mockingjay: The Final Book of The Hunger Games’ by Suzanne Collins
+// console.log(reverseArray(['a', 'b', 3, 'c', [], 10]));
+// // // 3. Write a script that displays the reading status of the following books (either to the webpage or to the console).
+//    let myLibrary = [ 
+//   {
+//     author: 'Bill Gates',
+//     title: 'The Road Ahead',
+//     isRead: true
+//   },
+//   {
+//     author: 'Steve Jobs',
+//     title: 'Walter Isaacson',
+//     isRead: true
+//   },
+//   {
+//     author: 'Suzanne Collins',
+//     title:  'Mockingjay: The Final Book of The Hunger Games', 
+//     isRead: false
+// }];
+// // // Example output:
+// // // I already read ‘The Road Ahead’ by Bill Gates
+// // // I already read ‘Walter Isaacson’ by Steve Jobs
+// // // I still need to read ‘Mockingjay: The Final Book of The Hunger Games’ by Suzanne Collins
 
-function readStatus() {
-    // let i = 0;
-    // while (i < myLibrary.length) {
-    //   .. do stuff ..;
-    //   return;
-    //   i++;
-    // }
-//   for (let i = 0; i < myLibrary.length; i++ ) {
-  for (let key of myLibrary) {
+// function readStatus() {
+//     // let i = 0;
+//     // while (i < myLibrary.length) {
+//     //   .. do stuff ..;
+//     //   return;
+//     //   i++;
+//     // }
+// //   for (let i = 0; i < myLibrary.length; i++ ) {
+//   for (let key of myLibrary) {
         
-    if (key.isRead == true) {
-        document.write("<p>I already read " + key.title + " by " + key.author + "</p>");
-    } else {
-        document.write("<p>I still need to read " + key.title + " by " + key.author + "</p>");
-    }  
-  }
-}
+//     if (key.isRead == true) {
+//         document.write("<p>I already read " + key.title + " by " + key.author + "</p>");
+//     } else {
+//         document.write("<p>I still need to read " + key.title + " by " + key.author + "</p>");
+//     }  
+//   }
+// }
     
- readStatus();
+//  readStatus();
+
+/ more advanced arrays and context of functions 18/4
+//  1. Suppose we have an array of people.
+// let people = ["Mary", "Greg", "Jane", "James"]; Using the splice() function, 
+// remove “Jane” from the array and add “Elizabeth” and “Artie”.  Then the array 
+// should look like this [“Mary”, “Greg”, “Elizabeth”, “Artie”, “James”].
+// let people = ['Mary', 'Greg', 'Jane', 'James'];
+// people.splice(people.indexOf('Jane'), 1, 'Elizabeth', 'Artie');
+// console.log(people);
+
+//  2. Suppose we have an array of objects.
+// books = [
+//   {
+//     author: 'Bill Gates',
+//     title: 'The Road Ahead',
+//   },
+//   {
+//     author: 'Steve Jobs',
+//     title: 'Walter Isaacson',
+//   }
+// ];
+// Using forEach() function, print each element to the webpage in the following way:
+// 1. Book ‘The Road Ahead’ is written by ‘Bill Gates’
+// 2. Book ‘Walter Isaacson’ is written by ‘Steve Jobs’
+
+
+let books = [
+  {
+		author: 'Bill Gates',
+		title: 'The Road Ahead',
+  },
+  { 
+		author: 'Steve Jobs',
+		title: 'Walter Isaacson',
+  }
+]
+
+books.forEach(function(book, i) {
+	document.write(`<p>${i + 1}. Book '${book.title}' is written by ${book.author}`)
+})
+
+// 3. Suppose we have an array of numbers.
+// let numbers = [112, -20, 52, 0, -1, 944];
+// Using filter() function, create a new array consisting only positive numbers.
+
+let numbers = [112, -20, 52, 0, -1, 944];
+positiveNumber = numbers.filter(function(item) {
+	return item > 0;
+})
+console.log(positiveNumber);
+
+// 4. Suppose we have an array of objects.
+let keyValueArray = [
+  {
+    key: 'name',
+    value: 'James'
+  },
+  {
+    key: 'age',
+    value: 27
+  },
+  {
+    key: 'surname',
+    value: 'Doe'
+  }
+];
+// Using map() function, create a new array consisting reformatted objects
+// like this:
+// [
+//   {
+//     name: 'James'
+//   },
+//   {
+//     age: 27
+//   },
+//   {
+//     surname: 'Doe'
+//   }
+// ]
+let reformattedArray = keyValueArray.map(function(item) {
+	let newObject = {};
+	newObject[item.key] = item.value;
+	
+	return newObject;
+});
+
+console.log(reformattedArray);
+
+// 1. Create a constructor function called Video. The function should accept arguments of title (a string), 
+// uploader (a string, the person who uploaded it), and seconds (a number, the duration), and it should 
+// save them as properties of the object. Create a method of the Video constructor called watch() which 
+// should log a string to the console like “You watched all 1800 seconds of Walking with Dinosaurs!” Create 
+// a new object using the Video constructor and call the watch() method of it.
+
+function Video(title, uploader, seconds) {
+    this.title = title;
+    this.uploader = uploader;
+    this.seconds = seconds;
+    this.watch = function() {
+        console.log(`You watched all ${this.seconds} of ${this.title}!`)
+    }
+
+}
+let video = new Video('Walking with Dinosaurs', 'BBC', 1800);
+video.watch();
+
+//  2. Suppose we have a student object:
+// let student = {
+//   name: 'Alex',
+//   lastname: 'Wood'
+// };
+// Write a function called displayStudentInfo which accepts an object and returns the string “Your full 
+// // name is NAME LASTNAME”. Use object destructuring to create “name” and “lastname” variables.
+
+let student = {
+	  name: 'Alex',
+	  lastname: 'Wood'
+	};
+
+function displayStudentInfo(student) {
+	let{name, lastname} = student;
+	
+	return `Your full name is ${name} ${lastname}.`
+}
+alert(displayStudentInfo(student));
+
+
+
+
+
