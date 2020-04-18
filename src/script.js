@@ -89,3 +89,145 @@ console.log(countCharacters ('Happy Easter, tomas', 't'));
  }
 
  console.log(reverseIt(10)); 
+
+
+// Objects
+// class exercises 
+// 1.  Write a program that lists the properties of an object. For example, for the object
+// let student = {
+//   name: "Jane Rayy",
+//   class: "VI",
+//   age: 12
+// };
+// Output will be: name, class, age
+let student = {
+    name: 'David Johns',
+    class: 'I',
+    age: 7
+};
+console.log(student);
+
+// 2.  Create an object that holds information of your favorite recipe. 
+// It should have properties for title (a string), servings (a number), and ingredients 
+// (a string, each ingredient separated by a comma). Display the recipe information on the 
+// webpage. Use heading for the title. Use paragraphs for other info. For example:
+// Mole
+// Servings: 2
+// Ingredients: cumin, cocoa, cinnamon
+
+let favDish = {
+    title: 'Spaghetti',
+    servings: 4,
+    ingredients: 'Olive Oil, Garlic, Basil, Salt, BlackPepper, Pasta'
+}
+document.write('<h1>' + favDish.title + '</h1>');
+document.write('<p>' + favDish.servings + '</p>');
+document.write('<p>' + favDish.ingredients + '</p>')
+
+
+
+
+// ???3. Write a function to get a copy of the object where the keys have become the values and the values become the keys. For example, for the object
+// let person = {
+//   name: 'Alex',
+//   lastname: 'Doe',
+//   age: 25,
+// };
+// The resulting object will be
+// {
+//    Alex: 'name',
+//    Doe: 'lastname',
+//    '25': 'age'
+// };
+
+// let customer = {
+//   name: 'Emma',
+//   lastname: 'Love',
+//   age: 30,
+//   displayInfo: function() {
+//       console.log(customer.value + customer.key)
+//   }
+// }
+*/
+// Array
+// 1. Suppose we have this array: people = ["Alex", "Mary", "Devon", "James"]; Do the following manipulations with the array: 
+    // 1) Remove “James” from the array; 
+    // 2) Remove “Alex” from the array; 
+    // 3) Add your name to the beginning of the array; 
+    // 4) Add “Jane” to the end of the array; 
+    // 5) Using for-loop, write all names of the changed array to the webpage using document.write() .
+
+// let people = ['Alex', 'Mary', 'Devon', 'James']
+
+// let removeLast = people.pop();
+//   document.write(people);
+
+// let removeFirst = people.shift();
+//   document.write(people);
+  
+// let addFirst = people.unshift('Nicole');
+//   document.write(people);
+
+// let addLast = people.push('Jane');
+//   document.write(people);
+
+// for (let item of people) {
+//     document.write[`removeLast,removeFirst, addFirst, addLast`]
+// }
+
+// 2. Write a function that accepts an array and returns a reversed version of it. Do not use the reverse() function. 
+//    For example: ['a', 'b', 3, 'c', [], 10] will be [10, [], 'c', 3, 'b', 'a'] .
+
+function reverseArray(myArray) {
+  let result = [];
+//  for (let i = 0; i < myArray.length; i++) {
+  for (let i = myArray.length-1; i >= 0; i--) {
+        result.push(myArray[i]);
+  }
+  return result
+//  return result.reverse();
+}
+    
+
+console.log(reverseArray(['a', 'b', 3, 'c', [], 10]));
+// // 3. Write a script that displays the reading status of the following books (either to the webpage or to the console).
+   let myLibrary = [ 
+  {
+    author: 'Bill Gates',
+    title: 'The Road Ahead',
+    isRead: true
+  },
+  {
+    author: 'Steve Jobs',
+    title: 'Walter Isaacson',
+    isRead: true
+  },
+  {
+    author: 'Suzanne Collins',
+    title:  'Mockingjay: The Final Book of The Hunger Games', 
+    isRead: false
+}];
+// // Example output:
+// // I already read ‘The Road Ahead’ by Bill Gates
+// // I already read ‘Walter Isaacson’ by Steve Jobs
+// // I still need to read ‘Mockingjay: The Final Book of The Hunger Games’ by Suzanne Collins
+
+function readStatus() {
+    // let i = 0;
+    // while (i < myLibrary.length) {
+    //   .. do stuff ..;
+    //   return;
+    //   i++;
+    // }
+//   for (let i = 0; i < myLibrary.length; i++ ) {
+  for (let key of myLibrary) {
+        
+    if (key.isRead == true) {
+        document.write("<p>I already read " + key.title + " by " + key.author + "</p>");
+    } else {
+        document.write("<p>I still need to read " + key.title + " by " + key.author + "</p>");
+    }  
+  }
+}
+    
+ readStatus();
